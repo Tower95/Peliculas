@@ -1,5 +1,7 @@
 package dominio;
 
+import services.IserviceMovies;
+
 import java.util.Objects;
 
 public class Movi {
