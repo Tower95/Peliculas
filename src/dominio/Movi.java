@@ -1,7 +1,5 @@
 package dominio;
 
-import services.IserviceMovies;
-
 import java.util.Objects;
 
 public class Movi {
@@ -10,6 +8,9 @@ public class Movi {
   public Movi(){}
 
   public Movi(String name){
+    if(name == "") {
+      throw new RuntimeException("Lo siento el valor de name no puede ser null");
+    }
     this.name = name;
   }
 

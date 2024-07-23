@@ -27,12 +27,13 @@ public class CatalogMoviesApp {
   }
 
   public static void showMenu(){
-    System.out.println("""
+    System.out.print("""
             *** Catalogo de Peliculas ***
             1.- Agregar Peliculla.
             2.- Listar Peliculas.
             3.- Buscar Pelicula.
             4.- Salir.
+            Elije una opcion : 
             """);
   }
 

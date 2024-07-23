@@ -16,8 +16,12 @@ public class ServiceMoviesList implements IserviceMovies{
 
   @Override
   public void listMoives() {
-    System.out.println("Listado de peliculas...");
-    movies.forEach(System.out::println);
+    if(movies.size() <= 0){
+      System.out.println("La lista esta vacia");
+    } else {
+      System.out.println("Listado de peliculas...");
+      movies.forEach(System.out::println);
+    }
   }
 
   @Override
