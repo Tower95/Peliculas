@@ -2,6 +2,7 @@ package presentation;
 
 import dominio.Movi;
 import services.IserviceMovies;
+import services.ServiceMoviesFiles;
 import services.ServiceMoviesList;
 
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class CatalogMoviesApp {
     var consola = new Scanner(System.in);
 
     // service implementation
-    IserviceMovies ServiceMovice = new ServiceMoviesList();
+    IserviceMovies ServiceMovice = new ServiceMoviesFiles();
     while (!salir){
       try {
         showMenu();
