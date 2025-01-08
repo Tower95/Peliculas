@@ -1,13 +1,13 @@
 package services;
 
-import dominio.Movi;
+import dominio.Movie;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ServiceMoviesList implements IserviceMovies{
 
-  private final List<Movi> movies;
+  private final List<Movie> movies;
 
   public ServiceMoviesList () {
     this.movies = new ArrayList<>();
@@ -25,34 +25,34 @@ public class ServiceMoviesList implements IserviceMovies{
   }
 
   @Override
-  public void addMovi(Movi movi) {
-    movies.add(movi);
+  public void addMovie(Movie movie) {
+    movies.add(movie);
   }
 
   @Override
-  public void searchMovi(Movi movi) {
+  public void searchMovie(Movie movie) {
 
-    var index = movies.indexOf(movi);
+    var index = movies.indexOf(movie);
 
     if(index == -1){
-      System.out.println("No se encontro "+movi.getName()+" en la lista");
+      System.out.println("No se encontro "+ movie.getName()+" en la lista");
     } else {
-      System.out.println("Pelicula " + movi.getName() + " encontrada en el index: " + index);
+      System.out.println("Pelicula " + movie.getName() + " encontrada en el index: " + index);
     }
   }
 
   public static void main(String[] args) {
-   var pelicula = new Movi("Batman");
-   var pelicula2 = new Movi("Superman");
+   var pelicula = new Movie("Batman");
+   var pelicula2 = new Movie("Superman");
 
    // dising pathern SERVICE
    IserviceMovies peliculas = new ServiceMoviesList();
 
-   peliculas.addMovi(pelicula2);
-   peliculas.addMovi(pelicula);
+   peliculas.addMovie(pelicula2);
+   peliculas.addMovie(pelicula);
 
    peliculas.listMoives();
 
-   peliculas.searchMovi(new Movi("Iron man"));
+   peliculas.searchMovie(new Movie("Iron man"));
   }
 }

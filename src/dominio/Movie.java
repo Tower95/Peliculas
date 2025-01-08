@@ -2,12 +2,12 @@ package dominio;
 
 import java.util.Objects;
 
-public class Movi {
+public class Movie {
   private String name;
 
-  public Movi(){}
+  public Movie(){}
 
-  public Movi(String name){
+  public Movie(String name){
     if(name == "") {
       throw new RuntimeException("Lo siento el valor de name no puede ser null");
     }
@@ -27,8 +27,8 @@ public class Movi {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    Movi movi = (Movi) o;
-    return Objects.equals(name, movi.name);
+    Movie movie = (Movie) o;
+    return Objects.equals(name, movie.name);
   }
 
   @Override
@@ -38,8 +38,6 @@ public class Movi {
 
   @Override
   public String toString() {
-    return "Movi{" +
-            "name='" + name + '\'' +
-            '}';
+    return name ;
   }
 }

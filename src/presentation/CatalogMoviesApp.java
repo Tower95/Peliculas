@@ -1,9 +1,8 @@
 package presentation;
 
-import dominio.Movi;
+import dominio.Movie;
 import services.IserviceMovies;
 import services.ServiceMoviesFiles;
-import services.ServiceMoviesList;
 
 import java.util.Scanner;
 
@@ -49,8 +48,9 @@ public class CatalogMoviesApp {
     switch (opcion){
       case 1 :
         System.out.println("Ingrese el nombre de la pelicula: ");
-        movies.addMovi(new Movi(consola.nextLine()));
+        movies.addMovie(new Movie(consola.nextLine()));
         salir = false;
+        String texto = "hola acontinuacion pasare a describir los paso necesrios que tenemos que realizar";
         break;
       case 2 :
         movies.listMoives();
@@ -59,7 +59,7 @@ public class CatalogMoviesApp {
         break;
       case 3:
         System.out.println("Porfavor ingrese el nombre de la pelicula que quiere buscar");
-        movies.searchMovi(new Movi(consola.nextLine()));
+        movies.searchMovie(new Movie(consola.nextLine()));
         waitImput(consola);
         salir = false;
         break;

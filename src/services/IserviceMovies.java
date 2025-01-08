@@ -1,11 +1,11 @@
 package services;
 
-import dominio.Movi;
+import dominio.Movie;
 
 public interface IserviceMovies{
   public void listMoives();
 
-  public void addMovi(Movi movi);
+  public void addMovie(Movie movie);
 
-  public void searchMovi(Movi movi);
+  public void searchMovie(Movie movie);
  }
